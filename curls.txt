@@ -1,0 +1,13 @@
+curl -X POST -H @{'Content-Type' = 'application/json'} -d '{
+  "greeting": [
+    {
+      "locale":"default",
+      "text":"Hello {{user_first_name}}! Are you ready to test my chatBot?"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAALjU9owRd4BADu8jTt7JpBeqIDt0p7flxVzn7sDUXrO953uz5c1AP0L1Mm9ywZALCRtdxZBhdsSJHvuh4TUOaQ48r6Mix9oxJSWLFfXWhf1W0B91IVaqTlSBT3GmzG2ZBl2i7p9qcLc7yHFDHoTiGi9bZB1f1xXHwbp0S7ltbGzgzPXnE5Y"
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "get_started": {"payload": "GET_STARTED"}
+}'  "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAALjU9owRd4BAO1077icpKX1CEvuYyYrGh4XQIoNzZAsl2kJXftFRAYMvZBrt1b5I1UFWoCGCOhIgRY3Fj6gySJoZBuqLD2q4BJVXBPXS8A5ZA1WcsYPOZAGy2V76BBh2ZCTCkZBvrQigWWPWXC5CKhJ4Po0SytWoPextItbXUdJHJKv6g9K5wN"
