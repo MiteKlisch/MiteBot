@@ -100,30 +100,27 @@ const getVideo = (type, sender_id) => {
 }
 
 const handlePostback = (sender_psid, recivedPostback) => {
-    let response;
-    const payload = recivedPostback.payload
+  let response;
+  const payload = recivedPostback.payload
 
-    if (payload === 'ROCK') {
-      response = videoTemplate('rock', sender_psid);
-      callSendAPI(sender_psid, response, function(){
-          callSendAPI(sender_psid, askTemplate('Show me more'));
-      });
-    } else if (payload === 'POP') {
-      response = videoTemplate('pop', sender_psid);
-      callSendAPI(sender_psid, response, function(){
-          callSendAPI(sender_psid, askTemplate('Show me more'));
-      });
-    } else if (payload === 'CLASSIC') {
-      response = videoTemplate('classic', sender_psid);
-      callSendAPI(sender_psid, response, function(){
-          callSendAPI(sender_psid, askTemplate('Show me more'));
-      });
-    }
-    else if (payload === 'GET_STARTED') {
-        response = askTemplate('What music do you want to listen to?');
-        callSendAPI(sender_psid, response);
-    }
-    
+  if (payload === 'ROCK') {
+    response = videoTemplate('rock', sender_psid);
+    callSendAPI(sender_psid, response);
+    callSendAPI(sender_psid, askTemplate('Show me more!'));
+  } else if (payload === 'POP') {
+    response = videoTemplate('pop', sender_psid);
+    callSendAPI(sender_psid, response);
+    callSendAPI(sender_psid, askTemplate('Show me more!'));
+  } else if (payload === 'CLASSIC') {
+    response = videoTemplate('classic', sender_psid);
+    callSendAPI(sender_psid, response);
+        callSendAPI(sender_psid, askTemplate('Show me more!'));
+  }
+  else if (payload === 'GET_STARTED') {
+      response = askTemplate('What music do you want to listen to?');
+      callSendAPI(sender_psid, response);
+  }
+  
 }
 
 
