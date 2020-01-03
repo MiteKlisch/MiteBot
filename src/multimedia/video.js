@@ -20,7 +20,7 @@ module.exports = {
        'https://www.youtube.com/watch?v=87w1y874gwM'
     ],
 
-    classical: [
+    classic: [
         'https://www.youtube.com/watch?v=wygy721nzRc',
         'https://www.youtube.com/watch?v=Rb0UmrCXxVA',
         'https://www.youtube.com/watch?v=6JQm5aSjX6g',

@@ -114,7 +114,7 @@ const handlePostback = (sender_psid, recivedPostback) => {
           callSendAPI(sender_psid, askTemplate('Show me more'));
       });
     } else if (payload === 'CLASSIC') {
-      response = videoTemplate('classical', sender_psid);
+      response = videoTemplate('classic', sender_psid);
       callSendAPI(sender_psid, response, function(){
           callSendAPI(sender_psid, askTemplate('Show me more'));
       });
